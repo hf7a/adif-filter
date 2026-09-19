@@ -7,7 +7,7 @@ field filtering, and intelligent deduplication.
 
 Author: Leszek HF7A
 License: MIT
-Version: 1.0.0
+Version: 1.0.1
 """
 
 import sys
@@ -23,7 +23,7 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QDragEnterEvent, QDropEvent
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # Type aliases
 AdifRecord: TypeAlias = Dict[str, str]
@@ -65,9 +65,9 @@ class AdifProcessor:
                 detected = chardet.detect(raw_content)['encoding'] or 'utf-8'
                 decoded_content = raw_content.decode(detected, errors='replace')
                 
-                # Simple splitting by EOR tag. 
-                # Note: This assumes <EOR> is not part of a comment or user field.
-                raw_records = decoded_content.split('<EOR>')
+                # Split records by the case-insensitive EOR tag.
+                # This assumes that an EOR-like sequence is not part of a field value.
+                raw_records = re.split(r'<EOR\s*>', decoded_content, flags=re.IGNORECASE)
                 
                 parsed_records = []
                 for r in raw_records:
