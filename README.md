@@ -1,4 +1,4 @@
-# ADIF Filter v1.0.0
+# ADIF Filter
 
 A GUI utility written in Python to parse, filter, merge, and re-save ADIF (Amateur Data Interchange Format) log files.
 
