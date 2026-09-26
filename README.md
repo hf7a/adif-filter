@@ -6,31 +6,25 @@ Designed for amateur radio operators who need to combine logs from different sou
 
 ## Key Features
 
-*   **Merge Multiple Logs:** Drag and drop multiple `.adi` / `.adif` files to combine them into a single output file (e.g., merge a contest log with your main logbook).
-*   **Deduplication:** Automatically identifies and removes duplicate QSOs based on `CALL`, `BAND`, `MODE`, `QSO_DATE`, and `TIME_ON`.
-*   **Field Filtering:** Select exactly which ADIF fields to keep (e.g., strip contest-specific fields like `APP_N1MM_...` while keeping essential QSO data).
-*   **Drag & Drop Interface:** Intuitive visual drop zone for easy file loading.
-*   **Grid Layout:** Multi-column view makes managing dozens of ADIF fields easy and readable.
-*   **Configuration:** Remembers your selected fields between sessions via `adif_config.txt`.
+- **Merge Multiple Logs:** Drag and drop multiple `.adi` / `.adif` files into a single output file.
+- **Deduplication:** Automatically removes duplicate QSOs based on `CALL`, `BAND`, `MODE`, `QSO_DATE`, and `TIME_ON`.
+- **Field Filtering:** Select exactly which ADIF fields to keep.
+- **Drag & Drop Interface:** Easy file loading.
+- **Grid Layout:** Multi-column field selection.
+- **Configuration:** Remembers selected fields via `adif_config.txt`.
 
 ## Requirements
 
-*   Python 3.10 or newer
-*   Dependencies listed in `requirements.txt`:
-    *   `PyQt6`
+- Python 3.10+
+- PyQt6
 
 ## Installation
 
-1.  **Download Files**
-    Download the `adif_filter.py` and `requirements.txt` files and save them together in a new folder on your computer (for example, a folder named `adif-filter`).
+Install PyQt6:
 
-2.  **Install Dependencies**
-    Open a terminal or command prompt, navigate into the folder where you saved the files, and run the following command:
-    
 ```bash
-pip install -r requirements.txt
+pip install PyQt6
 ```
-
 ## Usage
 
 Once the dependencies are installed, run the application from your terminal or command prompt:
