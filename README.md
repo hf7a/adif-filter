@@ -15,10 +15,9 @@ Designed for amateur radio operators who need to combine logs from different sou
 
 ## Requirements
 
-*   Python 3.12 or newer
+*   Python 3.10 or newer
 *   Dependencies listed in `requirements.txt`:
     *   `PyQt6`
-    *   `chardet`
 
 ## Installation
 
